@@ -4,16 +4,124 @@
   
     
     <entry>
-      <title>Markdown语言学习</title>
-      <link href="/2023/05/28/Markdown%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/"/>
-      <url>/2023/05/28/Markdown%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/</url>
+      <title>Markdown语言学习（二）</title>
+      <link href="/2023/06/07/Markdown%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%BA%8C%EF%BC%89/"/>
+      <url>/2023/06/07/Markdown%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%BA%8C%EF%BC%89/</url>
       
-        <content type="html"><![CDATA[<blockquote><p>Markdown 是一种用来写作的轻量级「标记语言」，它用简洁的语法代替排版。</p></blockquote><p>我将参考Markdown 的<a href="https://daringfireball.net/projects/markdown/syntax">官方文档</a>和<a href="https://sspai.com/post/25137">认识与入门 Markdown</a>来进行学习，在<a href="https://www.jianshu.com/">简书</a>上进行文章的实时预览。</p><h1 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h1><p> <code> #  一级标题</code><br><code> ## 二级标题</code><br><code>### 三级标题 </code><br>以此类推，总共六级标题，建议在井号后加一个空格，这是最标准的 Markdown 语法。</p><h1 id="序号"><a href="#序号" class="headerlink" title="序号"></a>序号</h1><p>列表的显示只需要在文字前加上 - 或 * 即可变为无序列表，有序列表则直接在文字前加 1.2.3. 符号要和文字之间加上一个字符的空格。</p><hr><h1 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h1><p>只需要在文本前加入 &gt; 这种尖括号（大于号）即可。</p><hr><h1 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h1><p>  <code>! [文字](图片的url地址)</code> </p><h1 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h1><p> <code>[文字](url地址)</code> </p><hr><p>#粗体与斜体<br>粗体：两个 * 包含一段文本<br>斜体：一个 * 包含一段文本</p><hr><h1 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h1><p> <code>| Tables      | Are           | Cool |</code><br><code>| ------------- |:-------------:| ------:|</code><br> <code>| col 3 is     | right-aligned | $1600 |</code><br>这段代码实际效果如下：</p><table><thead><tr><th>Tables</th><th align="center">Are</th><th align="right">Cool</th></tr></thead><tbody><tr><td>col 3 is</td><td align="center">right-aligned</td><td align="right">$1600</td></tr></tbody></table><ul><li>对齐<br>:— 表示左对齐，:—: 表示居中，—:表示右对齐。</li><li>换行<br>在表格内换行，可以使用 html 的 br 标签。<br><code>&lt;br&gt;</code></li></ul><hr><h1 id="代码框"><a href="#代码框" class="headerlink" title="代码框"></a>代码框</h1><p>用两个“ &#96; ”把中间的代码包裹起来，使用 tab 键即可缩进。</p><hr><h1 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h1><p>分割线的语法只需要另起一行，连续输入三个星号 *** 即可。</p><hr>]]></content>
+        <content type="html"><![CDATA[<p><a id="article_top"></a>本篇是记录md语言中的一些进阶的写法。</p><h1 id="锚点跳转"><a href="#锚点跳转" class="headerlink" title="锚点跳转"></a>锚点跳转</h1><ul><li>word文档的文档跳转，在md中也可以使用</li><li>md的锚点跳转是使用html的标签跳转</li></ul><pre><code class="html">&lt;a id=&quot;article_top&quot;&gt;&lt;/a&gt;[回到开头](#article_top)</code></pre><p>例如<a href="#article_top">回到开头</a></p>]]></content>
       
       
       <categories>
           
           <category> 博客基础 </category>
+          
+          <category> markdown </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> markdown </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hexo文章管理</title>
+      <link href="/2023/06/07/Hexo%E6%96%87%E7%AB%A0%E7%AE%A1%E7%90%86/"/>
+      <url>/2023/06/07/Hexo%E6%96%87%E7%AB%A0%E7%AE%A1%E7%90%86/</url>
+      
+        <content type="html"><![CDATA[<p>本篇文章是用来记录写文章的一些基础操作，以免忘记。0.0</p><h1 id="一-新建-md-文件"><a href="#一-新建-md-文件" class="headerlink" title="一. 新建 md 文件"></a>一. 新建 md 文件</h1><p><code>hexo new [layout] &quot;&lt;title&gt;&quot;</code><br>如<br><code>hexo new post &quot;Hexo文章管理&quot;</code> </p><h2 id="布局-–-layout"><a href="#布局-–-layout" class="headerlink" title="布局 – [layout]"></a>布局 – [layout]</h2><p>新建的时候，会根据 <em>scaffolds</em> 文件夹内相对应的文件模板来建立。<br><img src="/./img/scaffolds.png" alt="scaffolds"></p><h3 id="1-post（文章）"><a href="#1-post（文章）" class="headerlink" title="1. post（文章）"></a>1. post（文章）</h3><p>如果没有指定布局类型，则为默认布局为<em>post</em>，可以在站点配置文件修改 <em>default_layout</em> 参数来修改默认布局。</p><h3 id="2-draft（草稿）"><a href="#2-draft（草稿）" class="headerlink" title="2. draft（草稿）"></a>2. draft（草稿）</h3><ul><li>在建立时会被保存到 <em>source&#x2F;_drafts</em> 文件夹中</li><li>不会显示在页面上，如果不想某一篇文章显示在页面上，那么就可以把它移动到 <em>_drafts</em>文件夹中</li><li>在启动服务器时加上 <em>–draft</em> 参数来查看草稿<br><code>hexo server --draft</code></li><li>可以在站点配置文件中把 <em>render_drafts</em> 参数设为 true 来预览草稿 </li><li>通过 <em>publish</em> 命令将草稿发布文章或者页面，它将会被移动到指定的文件夹<br><code>hexo publish [layout] &lt;title&gt;</code></li></ul><h3 id="3-page（页面）"><a href="#3-page（页面）" class="headerlink" title="3. page（页面）"></a>3. page（页面）</h3><p>即独立页面，创建一个以标题为名字的目录，并在目录中放置一个 <em>index.md</em>文件，主要用来DIY博客页面的。<br><img src="/./img/page.png" alt="page"></p><hr><h1 id="二-设置Front-matter"><a href="#二-设置Front-matter" class="headerlink" title="二. 设置Front-matter"></a>二. 设置Front-matter</h1><p>创建好 md 文件后，最上方<strong>自动生成以 “- - - ”分隔</strong>的区域，主要是根据 <em>scaffolds</em> 文件夹中的模板生成的，这个区域用于指定个别文件的变量。<br><img src="/./img/Front-matter.png" alt="Markdown语言学习页面的Front-matter"></p><h2 id="预定义参数"><a href="#预定义参数" class="headerlink" title="预定义参数"></a>预定义参数</h2><table><thead><tr><th align="center">参数</th><th align="center">解释</th><th align="center">介绍</th></tr></thead><tbody><tr><td align="center">layout</td><td align="center">布局</td><td align="center">默认为true，如果你不想你的文章被处理，可以设置为false</td></tr><tr><td align="center">tags</td><td align="center">标签</td><td align="center">不适用于页面page布局</td></tr><tr><td align="center">categories</td><td align="center">分类</td><td align="center">不适用于页面page布局</td></tr><tr><td align="center">cover</td><td align="center">预览图</td><td align="center">top_img没设置的话，则默认顶部图片为cover</td></tr><tr><td align="center">top_img</td><td align="center">顶部图片</td><td align="center">该页面的顶部图片</td></tr></tbody></table><h3 id="1-标签tags"><a href="#1-标签tags" class="headerlink" title="1. 标签tags"></a>1. 标签tags</h3><p>一篇文章可以设置多个标签。例如：</p><pre><code> tags:  - Hexo - 博客 </code></pre><h3 id="2-分类categories"><a href="#2-分类categories" class="headerlink" title="2. 分类categories"></a>2. 分类categories</h3><ul><li>分类有层级关系</li></ul><pre><code>categories:- 第一层级- 第二层级</code></pre><p>即“第二层级” 是 “第一层级” 的子分类。</p><ul><li>添加多个分类</li></ul><pre><code>categories:- [1, 1.1]- [1, 1.2]- [2] </code></pre><ol><li>1和2 是同分类</li><li>1.1和1.2 是1下的同级子分类</li></ol><hr><h1 id="三-hexo命令"><a href="#三-hexo命令" class="headerlink" title="三. hexo命令"></a>三. hexo命令</h1><p>一般发布文章或者修改博客后需要这些操作：<strong>清除缓存&gt;生成静态文件&gt;启动服务器</strong>，测试没问题后再部署。</p><ul><li>清除缓存：<code>hexo clean</code></li><li>生成静态文件：<code>hexo generate</code>可简写为 <code>hexo g</code></li><li>启动服务器：<code>hexo server</code>或者 <code>hexo s</code><br> 常用参数：<code>-p（--port）</code>重设端口</li><li>部署：<code>hexo deploy</code>可简写为<code>hexo d</code>，用于将网站部署到服务器上<br>常用参数：<code>-g（--generate）</code><br><code>hexo d -g</code> 部署前预先生成静态文件，等同于 <code>hexo g -d</code></li></ul><p>可写成一条命令</p><pre><code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo shexo d </code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 博客基础 </category>
+          
+          <category> hexo </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Hexo </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>MyBatis</title>
+      <link href="/2023/06/07/MyBatis/"/>
+      <url>/2023/06/07/MyBatis/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> SSM框架 </category>
+          
+          <category> MyBatis </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> MyBatis </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>SSM框架及整合</title>
+      <link href="/2023/06/07/SSM%E6%A1%86%E6%9E%B6%E5%8F%8A%E6%95%B4%E5%90%88/"/>
+      <url>/2023/06/07/SSM%E6%A1%86%E6%9E%B6%E5%8F%8A%E6%95%B4%E5%90%88/</url>
+      
+        <content type="html"><![CDATA[<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><h2 id="MyBatis"><a href="#MyBatis" class="headerlink" title="MyBatis"></a>MyBatis</h2><p>封装JDBC，负责访问数据库，完成持久化操作。</p><h2 id="Spring"><a href="#Spring" class="headerlink" title="Spring"></a>Spring</h2><p>使用其核心思想IOC管理组件，使用AOP思想实现功能增强。</p><h2 id="SpringMVC"><a href="#SpringMVC" class="headerlink" title="SpringMVC"></a>SpringMVC</h2><p>接受浏览器发送的请求，并响应浏览器数据。</p><h1 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h1><p>Java SE 和 web 基础知识</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> SSM框架 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> SSM框架 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Markdown语言学习（一）</title>
+      <link href="/2023/05/28/Markdown%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/"/>
+      <url>/2023/05/28/Markdown%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>Markdown 是一种用来写作的轻量级「标记语言」，它用简洁的语法代替排版。</p></blockquote><p>我将参考Markdown 的<a href="https://daringfireball.net/projects/markdown/syntax">官方文档</a>和<a href="https://sspai.com/post/25137">认识与入门 Markdown</a>来进行学习，在<a href="https://www.jianshu.com/">简书</a>上进行文章的实时预览。</p><h1 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h1><p> <code> #  一级标题</code><br><code> ## 二级标题</code><br><code>### 三级标题 </code><br>以此类推，总共六级标题，建议在井号后加一个空格，这是最标准的 Markdown 语法。</p><h1 id="序号"><a href="#序号" class="headerlink" title="序号"></a>序号</h1><p>列表的显示只需要在文字前加上 - 或 * 即可变为无序列表，有序列表则直接在文字前加 1.2.3. 符号要和文字之间加上一个字符的空格。</p><hr><h1 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h1><p>只需要在文本前加入 &gt; 这种尖括号（大于号）即可。</p><hr><h1 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h1><p>  <code>![文字](图片的url地址)</code> </p><h1 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h1><p> <code>[文字](url地址)</code></p><hr><h1 id="字体的效果"><a href="#字体的效果" class="headerlink" title="字体的效果"></a>字体的效果</h1><ul><li>粗体：两个 * 或 _ 包含一段文本</li><li>斜体：一个 * 或 _ 包含一段文本</li><li>标记文本（高光）：两个&#x3D;&#x3D;包含一段文本</li><li>删除文本：两个 ~~ 包含一段文本</li></ul><hr><h1 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h1><p> <code>| Tables      | Are           | Cool |</code><br><code>| ------------- |:-------------:| ------:|</code><br> <code>| col 3 is     | right-aligned | $1600 |</code><br>这段代码实际效果如下：</p><table><thead><tr><th>Tables</th><th align="center">Are</th><th align="right">Cool</th></tr></thead><tbody><tr><td>col 3 is</td><td align="center">right-aligned</td><td align="right">$1600</td></tr></tbody></table><ul><li>对齐<br>:— 表示左对齐，:—: 表示居中，—:表示右对齐。</li><li>换行<br>在表格内换行，可以使用 html 的 br 标签。<br><code>&lt;br&gt;</code></li></ul><hr><h1 id="代码框"><a href="#代码框" class="headerlink" title="代码框"></a>代码框</h1><ul><li>一句：用两个“ &#96; ”把中间的代码包裹起来</li><li>一段：</li></ul><pre><code>\````代码类型代码块\```` </code></pre><ul><li>使用 tab 键缩进</li><li>被md语法解析了的特殊字符，可在前面加 “ &#x2F; ”</li></ul><hr><h1 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h1><p>分割线的语法只需要另起一行，连续输入三个星号 *** 即可。</p><hr>]]></content>
+      
+      
+      <categories>
+          
+          <category> 博客基础 </category>
+          
+          <category> markdown </category>
           
       </categories>
       
